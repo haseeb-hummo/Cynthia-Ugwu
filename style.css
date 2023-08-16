@@ -1,0 +1,137 @@
+@font-face {
+  font-family: General sans;
+  src: url("./General\ sans\ font/GeneralSans- 400 Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: General sans;
+  font-weight: 500;
+  src: url("./General\ sans\ font/GeneralSans-500 Medium.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: General sans;
+}
+
+/* Set full height and width for HTML and body */
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  width: 100%;
+  background-color: black;
+}
+
+#hero {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  color: white;
+  background-color: black;
+
+  & nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 2rem 2.2rem;
+    font-weight: 500;
+
+    & a {
+      text-decoration: none;
+      font-size: 1.3vw;
+      color: white;
+    }
+
+    & h4 {
+      font-weight: 500;
+    }
+  }
+
+  & .heading {
+    margin-top: 6vw;
+
+    & h1 {
+      font-size: 10.5vw;
+      font-weight: 500;
+      opacity: 0.6;
+      line-height: 0.85;
+      margin-left: 40px;
+    }
+
+    & .blockText {
+      width: fit-content;
+      /* background-color: rebeccapurple; */
+
+      & h1 {
+        margin-left: 190px;
+      }
+
+      & h5 {
+        text-align: right;
+        font-size: 1.2vw;
+        font-weight: 500;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  & .bottomText {
+    margin-top: 6rem;
+
+    & h5 {
+      font-size: 1.2vw;
+      font-weight: 500;
+      text-align: right;
+      padding: 0.5rem 2.2rem;
+    }
+  }
+
+  & .bottomText2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2.2rem;
+    font-size: 1.5vw;
+    font-weight: 500;
+    /* overflow-x: hidden; */
+
+    & .bt-h5 {
+      display: flex;
+      align-items: center;
+      gap: 350px;
+
+      & h5 {
+        display: flex;
+        align-items: center;
+        font-size: 1.2vw;
+        font-weight: 500;
+      }
+    }
+
+    & .bottem-button {
+      display: flex;
+      gap: 5px;
+
+      & .bt-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        background-color: #aaaaaa;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
