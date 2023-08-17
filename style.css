@@ -23,6 +23,31 @@ body {
   width: 100%;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+  padding: 2rem 2.2rem;
+  font-weight: 500;
+  z-index: 99;
+
+  & a {
+    text-decoration: none;
+    font-size: 1.3vw;
+    color: white;
+  }
+
+  & h4 {
+    font-weight: 500;
+  }
+}
+
 #main {
   width: 100%;
   overflow: hidden;
@@ -32,34 +57,9 @@ body {
 #hero {
   position: relative;
   min-height: 100vh;
-  min-width: 100vw;
+  width: 100vw;
   color: white;
   background-color: black;
-
-  & nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    background-color: black;
-    padding: 2rem 2.2rem;
-    font-weight: 500;
-    z-index: 99;
-
-    & a {
-      text-decoration: none;
-      font-size: 1.3vw;
-      color: white;
-    }
-
-    & h4 {
-      font-weight: 500;
-    }
-  }
 
   & .heading {
     margin-top: 13vw;
@@ -173,7 +173,7 @@ body {
       z-index: 9;
     }
   }
-  
+
   & h1 {
     font-size: 7.5vw;
     opacity: 0.6;
@@ -226,31 +226,29 @@ body {
         color: white;
         text-decoration: none;
         border-radius: 30px;
-        border : 1px solid white;
+        border: 1px solid white;
         padding: 0.4vw 1.5vw;
         font-size: 1.15vw;
         font-weight: 400;
       }
     }
-
   }
 
   & .about-mention {
     margin-top: 10vw;
     line-height: 1.8;
-    
+
     & p {
       opacity: 0.7;
       font-size: 1vw;
     }
-    
+
     & a {
       color: white;
       font-weight: 500;
       text-decoration: none;
     }
   }
-
 }
 
 footer {
@@ -258,22 +256,21 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color : white;
+  color: white;
   font-size: 1vw;
   padding: 0 1.5rem 1.5rem;
-  
+
   & .left {
     font-size: 1rem;
     font-weight: 500;
     display: flex;
     gap: 25px;
   }
-  
+
   & .right {
     display: flex;
     font-size: 0.875rem;
     font-weight: 500;
     gap: 50px;
   }
-
 }
