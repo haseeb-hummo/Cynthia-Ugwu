@@ -23,6 +23,19 @@ body {
   width: 100%;
 }
 
+[data-custom-cursor] {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.35s;
+  pointer-events: none;
+  z-index: 99;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -35,7 +48,7 @@ nav {
   background-color: black;
   padding: 2rem 2.2rem;
   font-weight: 500;
-  z-index: 99;
+  z-index: 9;
 
   & a {
     text-decoration: none;
@@ -252,6 +265,7 @@ nav {
 }
 
 footer {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -259,6 +273,7 @@ footer {
   color: white;
   font-size: 1vw;
   padding: 0 1.5rem 1.5rem;
+  z-index: 2;
 
   & .left {
     font-size: 1rem;
