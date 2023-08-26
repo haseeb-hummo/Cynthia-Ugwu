@@ -31,7 +31,7 @@ body {
   left: 0;
   border-radius: 50%;
   background-color: #fff;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.35s;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
   pointer-events: none;
   z-index: 99;
 }
@@ -39,7 +39,7 @@ body {
 nav {
   position: fixed;
   top: 0;
-  left: 0;
+  /* left: 0; */
   width: 100%;
   display: flex;
   align-items: center;
@@ -74,6 +74,16 @@ nav {
   color: white;
   background-color: black;
 
+  & .heading-animation {
+    width: 100%;
+    /* background-color: red; */
+    overflow: hidden;
+
+    & .hidden {
+      transform: translateY(100%);
+    }
+  }
+
   & .heading {
     margin-top: 13vw;
 
@@ -87,9 +97,9 @@ nav {
 
     & .blockText {
       width: fit-content;
-      /* background-color: rebeccapurple; */
 
       & h1 {
+        transform: translateY(125%);
         margin-left: 190px;
       }
 
@@ -110,6 +120,10 @@ nav {
       font-weight: 500;
       text-align: right;
       padding: 0.5rem 2.2rem;
+    }
+
+    & .hidden {
+      transform: translateY(170%);
     }
   }
 
@@ -138,6 +152,7 @@ nav {
     & .bottem-button {
       display: flex;
       gap: 5px;
+      transform: translateY(140%);
 
       & .bt-circle {
         display: flex;
