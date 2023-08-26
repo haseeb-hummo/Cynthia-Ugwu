@@ -33,17 +33,17 @@ function firstPageAnimation() {
 }
 
 
+const customCursor = document.querySelector("[data-custom-cursor]");
 
+let timeout;
+let cursorScaleX = 1;
+let cursorScaleY = 1;
+let prevX = 0;
+let prevY = 0;
 
-function cursorAnimation() {
-
-    let cursorScaleX = 1;
-    let cursorScaleY = 1;
-
-    let prevX = 0;
-    let prevY = 0;
-
-    window.addEventListener("mousemove", (e) => {
+function cursorAnimation(e) {
+    // console.log(e);
+        clearTimeout(timeout);
 
         let diffX = e.clientX - prevX;
         let diffY = e.clientY - prevY;
@@ -54,37 +54,24 @@ function cursorAnimation() {
         cursorScaleX = gsap.utils.clamp(0.8, 1.2, diffX);
         cursorScaleY = gsap.utils.clamp(0.8, 1.2, diffY);
 
-        customCursorFun(e.clientX , e.clientY ,  cursorScaleX , cursorScaleY)
-        // console.log(cursorScaleX , cursorScaleY)
+        customCursorFun(e.clientX, e.clientY, cursorScaleX, cursorScaleY);
 
-    })
+        timeout = setTimeout(() => {
+            const positionX = e.clientX - customCursor.offsetWidth / 2;
+            const positionY = e.clientY - customCursor.offsetHeight / 2;
+            customCursor.style.transform = `translate(${positionX}px , ${positionY}px) scale(1 , 1)`;
+        }, 100);
+        // console.log(cursorScaleX, cursorScaleY);
 }
 
-cursorAnimation();
+function customCursorFun(clientX, clientY, cursorScaleX, cursorScaleY) {
 
+    const positionX = clientX - customCursor.offsetWidth / 2;
+    const positionY = clientY - customCursor.offsetHeight / 2;
 
-const customCursor = document.querySelector("[data-custom-cursor]");
+    customCursor.style.transform = `translate(${positionX}px , ${positionY}px) scale(${cursorScaleX} , ${cursorScaleY})`;
+}
 
-function customCursorFun(clientX , clientY , cursorScaleX, cursorScaleY) {
-    
-            const positionX = clientX - customCursor.offsetWidth / 2;
-            const positionY = clientY - customCursor.offsetHeight / 2;
-    
-            customCursor.style.transform = `translate(${positionX}px , ${positionY}px) scale(${cursorScaleX} , ${cursorScaleY})`;
-    
-    }
-    customCursorFun();
-    
-    
-
-
+document.addEventListener("mousemove" , cursorAnimation)
 
 firstPageAnimation();
-// function customCursorFun(){
-    
-//     window.addEventListener("mousemove" , (e) => {
-//         document.querySelector("[data-custom-cursor]").style.transform = `translate(${e.clientX}px - .offsetWidth / 2, ${e.clientY}px) - .offsetHeight / 2`
-//     })
-    
-// }
-// customCursorFun();
