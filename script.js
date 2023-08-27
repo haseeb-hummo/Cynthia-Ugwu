@@ -118,14 +118,17 @@ function enlargeCursor() {
     customCursor.style.width = '90px';
     customCursor.style.opacity = '0.8';
     customCursor_h5.style.opacity = 1;
+    customCursor.style.mixBlendMode = 'normal'; // Enclose 'overlay' in quotes    
 }
 
 // Function to normalize cursor size and opacity
 function normalizeCursor() {
-    customCursor.style.height = '12px'; // Original height
-    customCursor.style.width = '12px';  // Original width
+    customCursor.style.height = '13px'; // Original height
+    customCursor.style.width = '13px';  // Original width
     customCursor.style.opacity = '1';
     customCursor_h5.style.opacity = 0;
+    customCursor.style.color = "black";
+    customCursor.style.mixBlendMode = "difference";
 }
 
 

@@ -29,8 +29,8 @@ body {
 [data-custom-cursor] {
   /* Position and appearance */
   position: absolute;
-  height: 12px;
-  width: 12px;
+  height: 13px;
+  width: 13px;
   top: 0;
   left: 0;
   border-radius: 50%;
@@ -38,6 +38,8 @@ body {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
   pointer-events: none;
   z-index: 99;
+  color: black;
+  mix-blend-mode: difference;
 
   /* Center content within cursor */
   display: flex;
