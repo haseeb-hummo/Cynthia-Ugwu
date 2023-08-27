@@ -379,7 +379,6 @@ footer {
   }
 
   #hero {
-    margin-top: 60px;
     display: flex;
     flex-direction: column;
     /* align-items: start; */
@@ -409,12 +408,22 @@ footer {
       }
     }
 
-    & .bottomText2 .bt-h5 {
-      display: flex;
-      gap: 100px;
-      & h5 {
-        font-size: 15px;
+    & .bottomText2 {
+      gap: 30px;
+
+      .bt-h5 {
+        display: flex;
+        gap: 35px;
+
+        & h5 {
+          font-size: 15px;
+        }
+  
+        & .bottem-button {
+          display: none;
+        }
       }
+
     }
   }
 
