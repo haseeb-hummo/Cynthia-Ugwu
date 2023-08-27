@@ -1,3 +1,4 @@
+/* Define custom fonts using @font-face */
 @font-face {
   font-family: General sans;
   src: url("./General\ sans\ font/GeneralSans- 400 Regular.otf");
@@ -9,11 +10,12 @@
   src: url("./General\ sans\ font/GeneralSans-500 Medium.otf");
 }
 
+/* Global styling for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: General sans;
+  font-family: General sans; /* Apply custom font */
 }
 
 /* Set full height and width for HTML and body */
@@ -23,7 +25,9 @@ body {
   width: 100%;
 }
 
+/* Custom cursor styling */
 [data-custom-cursor] {
+  /* Position and appearance */
   position: absolute;
   height: 12px;
   width: 12px;
@@ -34,12 +38,22 @@ body {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
   pointer-events: none;
   z-index: 99;
+
+  /* Center content within cursor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Initially hide text content */
+  & h5 {
+    opacity: 0;
+  }
 }
 
+/* Styling for navigation bar */
 nav {
   position: fixed;
   top: 0;
-  /* left: 0; */
   width: 100%;
   display: flex;
   align-items: center;
@@ -50,23 +64,25 @@ nav {
   font-weight: 500;
   z-index: 9;
 
+  /* Styling for links and headings */
   & a {
     text-decoration: none;
     font-size: 1.3vw;
     color: white;
   }
-
   & h4 {
     font-weight: 500;
   }
 }
 
+/* Styling for main section */
 #main {
   width: 100%;
   overflow: hidden;
   background-color: black;
 }
 
+/* Styling for hero section */
 #hero {
   position: relative;
   min-height: 100vh;
@@ -74,19 +90,22 @@ nav {
   color: white;
   background-color: black;
 
+  /* Styling for heading animation */
   & .heading-animation {
     width: 100%;
-    /* background-color: red; */
     overflow: hidden;
 
+    /* Styling for hidden elements within animation */
     & .hidden {
       transform: translateY(100%);
     }
   }
 
+  /* Styling for heading */
   & .heading {
     margin-top: 13vw;
 
+    /* Styling for heading text */
     & h1 {
       font-size: 10.5vw;
       font-weight: 500;
@@ -95,14 +114,17 @@ nav {
       margin-left: 40px;
     }
 
+    /* Styling for block text */
     & .blockText {
       width: fit-content;
 
+      /* Styling for block text heading */
       & h1 {
         transform: translateY(125%);
         margin-left: 190px;
       }
 
+      /* Styling for block text subheading */
       & h5 {
         text-align: right;
         font-size: 1.2vw;
@@ -112,9 +134,11 @@ nav {
     }
   }
 
+  /* Styling for bottom text */
   & .bottomText {
     margin-top: 6rem;
 
+    /* Styling for bottom text heading */
     & h5 {
       font-size: 1.2vw;
       font-weight: 500;
@@ -122,11 +146,13 @@ nav {
       padding: 0.5rem 2.2rem;
     }
 
+    /* Styling for hidden elements within bottom text */
     & .hidden {
       transform: translateY(170%);
     }
   }
 
+  /* Styling for secondary bottom text section */
   & .bottomText2 {
     display: flex;
     align-items: center;
@@ -134,8 +160,8 @@ nav {
     padding: 0 2.2rem;
     font-size: 1.5vw;
     font-weight: 500;
-    /* overflow-x: hidden; */
 
+    /* Styling for button and circle icons */
     & .bt-h5 {
       display: flex;
       align-items: center;
@@ -148,7 +174,6 @@ nav {
         font-weight: 500;
       }
     }
-
     & .bottem-button {
       display: flex;
       gap: 5px;
@@ -170,6 +195,7 @@ nav {
   }
 }
 
+/* Styling for second section */
 .second {
   width: 100%;
   min-height: 100vh;
@@ -178,7 +204,8 @@ nav {
   padding: 3vw;
   margin-top: 8vw;
 
-  & .element {
+  /* Styling for individual elements */
+  & .elements {
     position: relative;
     max-width: 86vw;
     color: white;
@@ -190,24 +217,40 @@ nav {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
 
+    /* Hover effect */
     &:hover img {
-      display: block;
+      opacity: 1;
+      transition: all ease 0.2s;
     }
 
+    /* Styling for image overlay */
     & img {
-      display: none;
+      opacity: 0;
       position: absolute;
       height: 150%;
+      pointer-events: none;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       z-index: 9;
+    }
+
+    /* Hover effect for text */
+    &:hover h1 {
+      transform: translateX(50px);
+      opacity: 0.2;
     }
   }
 
+  /* Styling for headings */
   & h1 {
     font-size: 7.5vw;
     opacity: 0.6;
     font-weight: 500;
+    transition: all ease-in-out 0.5s;
   }
 
+  /* Styling for subheadings */
   & h5 {
     font-size: 1.2vw;
     font-weight: 400;
@@ -216,6 +259,7 @@ nav {
   }
 }
 
+/* Styling for about section */
 #about {
   min-height: 100vh;
   width: 100%;
@@ -224,16 +268,19 @@ nav {
   margin-top: 12vw;
   padding: 0 2rem;
 
+  /* Styling for inner content */
   & .about-inner {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
     padding-right: 8.5rem;
 
+    /* Styling for about image */
     & img {
       height: 230px;
     }
 
+    /* Styling for about text */
     & .about-text {
       width: 38%;
       margin-left: 5.5vw;
@@ -241,15 +288,16 @@ nav {
       font-weight: 400;
       line-height: 1.6;
 
+      /* Styling for specific paragraphs */
       & p:nth-child(1) {
         opacity: 0.6;
         font-size: 1vw;
       }
-
       & p:nth-child(2) {
         margin-bottom: 1.5vw;
       }
 
+      /* Styling for links */
       & a {
         color: white;
         text-decoration: none;
@@ -258,19 +306,26 @@ nav {
         padding: 0.4vw 1.5vw;
         font-size: 1.15vw;
         font-weight: 400;
+        transition: all ease 0.5s;
+
+        &:hover {
+          color: black;
+          background-color: #fff;
+        }
       }
     }
   }
 
+  /* Styling for additional mention in about section */
   & .about-mention {
     margin-top: 10vw;
     line-height: 1.8;
 
+    /* Styling for paragraphs and links */
     & p {
       opacity: 0.7;
       font-size: 1vw;
     }
-
     & a {
       color: white;
       font-weight: 500;
@@ -279,6 +334,7 @@ nav {
   }
 }
 
+/* Styling for footer */
 footer {
   position: relative;
   width: 100%;
@@ -287,20 +343,21 @@ footer {
   justify-content: space-between;
   color: white;
   font-size: 1vw;
-  padding: 0 1.5rem 1.5rem;
+  padding: 0 2rem 1.5rem;
   z-index: 2;
 
-  & .left {
+  /* Styling for footer sections */
+  & .liveTime {
     font-size: 1rem;
     font-weight: 500;
     display: flex;
     gap: 25px;
   }
-
+  
   & .right {
     display: flex;
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 400;
     gap: 50px;
   }
 }
