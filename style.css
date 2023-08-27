@@ -262,7 +262,7 @@ nav {
 }
 
 /* Styling for about section */
-#about {
+.about {
   min-height: 100vh;
   width: 100%;
   position: relative;
@@ -355,11 +355,123 @@ footer {
     display: flex;
     gap: 25px;
   }
-  
+
   & .right {
     display: flex;
     font-size: 0.875rem;
     font-weight: 400;
     gap: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  [data-custom-cursor] {
+    display: none;
+  }
+
+  nav {
+    font-size: 25px;
+    padding: 2rem;
+
+    & a {
+      font-size: 25px;
+    }
+  }
+
+  #hero {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    justify-content: space-around;
+
+    & .heading {
+      & .heading-animation {
+        margin-left: 80px;
+
+        & h1 {
+          font-size: 100px;
+          margin-left: 0;
+        }
+
+        & h5 {
+          margin-left: 0;
+          font-size: 20px;
+        }
+      }
+    }
+
+    & .bottomText {
+      margin-top: 0;
+
+      & h5 {
+        font-size: 20px;
+      }
+    }
+
+    & .bottomText2 .bt-h5 {
+      display: flex;
+      gap: 100px;
+      & h5 {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .second {
+    min-height: 50vh;
+  }
+
+  .about {
+    & .about-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-right: 0;
+
+      & p {
+        font-size: 25px;
+      }
+
+      & img {
+        height: 400px;
+      }
+
+      & .about-text {
+        margin-top: 100px;
+        width: 80%;
+      }
+
+    }
+    & .about-mention {
+      margin-bottom: 200px;
+      margin-bottom: 100px;
+      padding-left: 11vw;
+      font-size: 20px;
+      
+      & p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 200px;
+    color: black;
+    background-color: #fff;
+
+    & .liveTime {
+      font-size: 30px;
+    }
+
+    & h4 {
+      font-size: 20px;
+    }
   }
 }
