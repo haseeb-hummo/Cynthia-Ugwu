@@ -1,7 +1,9 @@
 // Initialize Locomotive Scroll
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
+document.addEventListener("DOMContentLoaded", function() {
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('#main'),
+        smooth: true
+    });
 });
 
 // Function for the first page animation
