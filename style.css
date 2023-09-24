@@ -371,6 +371,10 @@ footer {
     display: none;
   }
 
+  #main {
+    height: 255vh;
+  }
+
   nav {
     font-size: 20px;
     padding: 2rem;
